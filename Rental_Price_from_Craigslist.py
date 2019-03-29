@@ -1,6 +1,7 @@
 # import libraries
 import numpy as np
-import pandas as pd import plotlyimport plotly.plotly as py# import dataraw_data = pd.read_csv('data.csv') raw_data.head() raw_data.describe() raw_data.isnull().sum()# deal with mis-recorded datadata = raw_data[raw_data['price']>100]data_plot = data[['latitude','longitude', 'price', 'bedrooms','bathrooms']].copy()df = data_plot.dropna()# Get the interactive plot with can show each roome's price, number of bedroom and number of bathroomdf['text'] = df['bedrooms'].astype(str) + 'bed, ' + df['bathrooms'].astype(str) + \
+import pandas as pd import plotly
+import plotly.plotly as py# import dataraw_data = pd.read_csv('data.csv') raw_data.head() raw_data.describe() raw_data.isnull().sum()# deal with mis-recorded datadata = raw_data[raw_data['price']>100]data_plot = data[['latitude','longitude', 'price', 'bedrooms','bathrooms']].copy()df = data_plot.dropna()# Get the interactive plot with can show each roome's price, number of bedroom and number of bathroomdf['text'] = df['bedrooms'].astype(str) + 'bed, ' + df['bathrooms'].astype(str) + \
              'bath, '+ 'price:'+ df['price'].astype(str)
 
 scl = [ [0,"rgb(5, 10, 172)"],[0.35,"rgb(40, 60, 190)"],[0.5,"rgb(70, 100, 245)"],\
