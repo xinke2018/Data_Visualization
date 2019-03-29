@@ -95,21 +95,3 @@ tds_5['total_f'].iplot(
     xTitle='Date',
     yTitle='total count of connection',
     title='Anomaly Detection - ID:4')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
