@@ -1,11 +1,15 @@
 # import libraries
 import numpy as np
 import pandas as pd import plotly
-import plotly.plotly as py# import data and check basie information
+import plotly.plotly as py
+
+# import data and check basic information
 raw_data = pd.read_csv('data.csv')
 raw_data.head()
 raw_data.describe()
-raw_data.isnull().sum()# deal with mis-recorded data
+raw_data.isnull().sum()
+
+# deal with mis-recorded data
 data = raw_data[raw_data['price']>100]
 data_plot = data[['latitude','longitude', 'price', 'bedrooms','bathrooms']].copy()
 df = data_plot.dropna()
